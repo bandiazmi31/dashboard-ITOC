@@ -1,5 +1,25 @@
 # ITOC Dashboard - Setup Guide
 
+Web-based Operations Center (ITOC) dashboard built with Flask, SQLAlchemy, and PostgreSQL (Supabase) to monitor IT services, ticketing, NOC metrics, shifts, handover notes, and automated Security Operations Center (SOC) data imports.
+
+## Features
+
+* **SOC Data Import & Multi-Sheet Auto-Detection:**
+  * Supports `.xlsx` (Excel) and `.csv` uploads.
+  * Automatic template detection (`Raw_Threat_HC`, `Raw_URL_Blocked`, `Raw_Traffic_Rule`, `Raw_Traffic_Daily`).
+  * Multi-sheet workbook scanning with interactive sheet selection.
+  * Preview, data validation, replacement warnings, and 2-minute import cooldown.
+* **SOC Dashboard & Analytics:**
+  * Aggregated event metrics, top threat analysis, and daily traffic volume trends (GB).
+* **Service Desk & Ticket Management:**
+  * ManageEngine integration, ticket status sync, SLA metrics tracking, and volume trends.
+* **NOC & SLA Monitoring:**
+  * Link/ISP availability ranking, downtime tracking, and traffic analysis.
+* **Shift & Handover Management:**
+  * Team rosters, calendar schedules, and open operational handover logs.
+* **Role-Based Access Control (RBAC):**
+  * Admin & User roles with session management and secure authentication.
+
 ## Prerequisites
 - Python 3.9+
 - PostgreSQL database (Supabase)
