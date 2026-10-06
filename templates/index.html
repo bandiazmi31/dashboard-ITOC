@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITOC Dashboard</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <!-- Chart.js & SheetJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">ITOC Dashboard</div>
+        <div class="clock" id="clock">--:--:-- WIB</div>
+        <div class="user-info">
+            <span id="user-name">User</span> |
+            <span id="user-shift">Team -</span> |
+            <button id="theme-toggle">&#127774;</button>
+            <button id="logout">Logout</button>
+        </div>
+    </header>
+    
+    <nav class="control-bar">
+        <div class="tabs">
+            <button class="tab active" data-tab="ringkasan">Ringkasan</button>
+            <button class="tab" data-tab="service-desk">Service Desk</button>
+            <button class="tab" data-tab="noc-sla">NOC & SLA</button>
+            <button class="tab" data-tab="soc">SOC</button>
+            <button class="tab" data-tab="handover">Serah Terima</button>
+            <button class="tab" data-tab="shifts">Tim & Jadwal</button>
+            <button class="tab" data-tab="import">Impor Data</button>
+            <button class="tab" data-tab="import-soc">Impor SOC</button>
+            <button class="tab admin-only" data-tab="users">Pengguna</button>
+        </div>
+        <div class="filters">
+            <input type="date" id="filter-start">
+            <input type="date" id="filter-end">
+            <select id="filter-shift">
+                <option value="">Semua Shift</option>
+                <option value="Pagi">Pagi</option>
+                <option value="Sore">Sore</option>
+                <option value="Malam">Malam</option>
+            </select>
+            <button id="apply-filter">Terapkan</button>
+        </div>
+    </nav>
+    
+    <main id="content" class="content">
+        <!-- Dynamic content rendered via JS -->
+    </main>
+
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/components.js"></script>
+    <script src="/static/js/charts.js"></script>
+    <script src="/static/js/import.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
